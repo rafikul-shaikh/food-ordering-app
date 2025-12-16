@@ -4,18 +4,18 @@ import { Home, HelpCircle, ShoppingCart, CircleUser } from "lucide-react";
 const Navbar = () => {
   return (
     <>
-      <header className="w-full  bg-gray-200">
-        <div className="max-w-7xl mx-auto px-4">
+      <header className="w-full bg-white border-b border-gray-50 shadow-md ">
+        <div className="max-w-7xl mx-auto px-35 shadow-cyan-900">
           <nav className="flex items-center justify-between h-24">
             <a href="/">
               <img
                 src="https://caledonkababs.com/static/media/logo.dc18dac3a4d547f493ef.png"
                 alt="logo"
-                className="w-16"
+                className="w-20 h-16"
               />
             </a>
 
-            <ul className="hidden md:flex gap-x-8 text-gray-600">
+            <ul className=" font-semibold  hidden md:flex gap-x-8 text-gray-600">
               <li className="flex items-center gap-1">
                 {/* <span>🏠</span> Home */}
                 <Home />
