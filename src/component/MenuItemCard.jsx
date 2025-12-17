@@ -1,15 +1,20 @@
 const MenuItemCard = ({ item }) => {
   return (
-    <div className="border p-4 rounded flex justify-between items-center">
+    <div className="border p-4 rounded flex flex-wrap justify-between items-center">
       <div>
-        {/* <img src={img} alt="" /> */}
+        <img
+          src={item.image}
+          // alt={item.name}
+          className="w-50 h-32 object-cover rounded-2xl"
+        />
         <h3 className="font-medium">{item.name}</h3>
         <p className="text-sm text-gray-600">₹ {item.price}</p>
       </div>
-
-      <button className="border px-4 py-1 rounded text-green-600 border-green-600">
-        Add
-      </button>
+      <div>
+        <button className="border px-4 py-1 rounded text-green-600 border-green-600">
+          + Add
+        </button>
+      </div>
     </div>
   );
 };
