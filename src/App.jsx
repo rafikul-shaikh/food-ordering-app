@@ -1,19 +1,8 @@
 import "./App.css";
-import Navbar from "./component/navbar";
-import CategorySlider from "./component/CategorySlider";
-import SearchBar from "./component/SearchBar";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
 
 function App() {
-  return (
-    <>
-      <Router>
-        <Navbar />
-        <CategorySlider />
-        <SearchBar />
-      </Router>
-    </>
-  );
+  return <Home />;
 }
-
 export default App;
