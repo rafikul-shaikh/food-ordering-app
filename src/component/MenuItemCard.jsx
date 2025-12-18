@@ -6,7 +6,7 @@ const MenuItemCard = ({ item, onShowDetails }) => {
       <img
         src={item.image}
         alt={item.name}
-        className="w-full h-40 object-cover rounded-xl"
+        className="w-full h-33 object-cover rounded-xl"
       />
       <h3 className="mt-3 text-sm font-medium">{item.name}</h3>
       <button
@@ -17,7 +17,7 @@ const MenuItemCard = ({ item, onShowDetails }) => {
       </button>
 
       <div className="flex justify-between">
-        <p className="mt-4 text-lg font-bold">
+        <p className="mt-4 text-lg ">
           <span className="font-bold text-2xl">₹ </span>
           {item.price}
         </p>

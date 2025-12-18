@@ -5,7 +5,7 @@ import { ArrowLeft, ArrowRight } from "lucide-react";
 const CategorySlider = () => {
   return (
     <>
-      <section className="w-full bg-gray-50 ">
+      <section className="w-full bg-white ">
         <div className="max-w-7xl mx-auto px-35 py-3 border-b border-gray-300">
           <h2 className="text-2xl font-semibold mb-8">
             Explore our Categories

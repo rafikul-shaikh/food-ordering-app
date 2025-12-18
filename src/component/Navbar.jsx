@@ -4,7 +4,7 @@ import { Home, HelpCircle, ShoppingCart, CircleUser } from "lucide-react";
 const Navbar = () => {
   return (
     <>
-      <header className="w-full bg-white border-b border-gray-50 shadow-md ">
+      <header className=" fixed top-0 left-0 w-full bg-white border-b border-gray-50 z-50 shadow-md ">
         <div className="max-w-7xl mx-auto px-35 shadow-cyan-900">
           <nav className="flex items-center justify-between h-24">
             <a href="/">

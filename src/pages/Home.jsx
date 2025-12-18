@@ -4,15 +4,17 @@ import CategorySlider from "../component/CategorySlider";
 import SearchBar from "../component/SearchBar";
 import MenuSection from "../component/MenuSection";
 
-const home = () => {
+const Home = () => {
   return (
     <>
       <Navbar />
-      <CategorySlider />
-      <SearchBar />
-      <MenuSection />
+      <main className="pt-24">
+        <CategorySlider />
+        <SearchBar />
+        <MenuSection />
+      </main>
     </>
   );
 };
 
-export default home;
+export default Home;
