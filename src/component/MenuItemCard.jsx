@@ -1,27 +1,36 @@
-const MenuItemCard = ({ item }) => {
+import { Plus } from "lucide-react";
+
+const MenuItemCard = ({ item, onShowDetails }) => {
   return (
-    <div className="border rounded-xl p-3">
-      {/* IMAGE */}
+    <div className=" p-3">
       <img
         src={item.image}
         alt={item.name}
         className="w-full h-40 object-cover rounded-xl"
       />
-
-      {/* NAME */}
       <h3 className="mt-3 text-sm font-medium">{item.name}</h3>
+      <button
+        onClick={onShowDetails}
+        className="text-sm text-blue-500 hover:underline"
+      >
+        Show Details
+      </button>
 
-      {/* PRICE */}
-      <p className="mt-1 font-semibold">₹ {item.price}</p>
-
-      {/* BUTTON */}
-      {item.available ? (
-        <button className="mt-3 w-full border border-orange-500 text-orange-500 py-1 rounded font-medium hover:bg-orange-500 hover:text-white">
-          + Add
-        </button>
-      ) : (
-        <p className="mt-3 text-sm text-gray-500 text-center">Not Available</p>
-      )}
+      <div className="flex justify-between">
+        <p className="mt-4 text-lg font-bold">
+          <span className="font-bold text-2xl">₹ </span>
+          {item.price}
+        </p>
+        {item.available ? (
+          <button className=" flex justify-around mt-3 pr-2 w-18 border-2 border-orange-500 text-orange-500 py-1 rounded font-bold hover:bg-orange-500 hover:text-white">
+            <Plus className="font-bold" /> Add
+          </button>
+        ) : (
+          <p className="mt-3 text-sm text-black-500 text-center">
+            Not Available
+          </p>
+        )}
+      </div>
     </div>
   );
 };

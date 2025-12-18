@@ -97,16 +97,38 @@ export const menuItems = [
   },
 
 
-//CHICKEN KEBAB SECTION DATA//
-{
-  id:11,
-  category:"Fish Kebabs",
-  name:"Vatti Ki Bhetki",
-  price:179,
-  available:true,
-  image:"https://backend.caledonkababs.com/uploads/productsImage/1714196599982VATTI%20KI%20BHETKI.jpg"
+//FISH KEBAB SECTION DATA//
 
-}
+{
+  id: 11,
+  category: "Fish Kebabs",
+  name: "Vatti Ki Bhetki",
+  price: 179,
+  available: true,
+  image:
+    "https://backend.caledonkababs.com/uploads/productsImage/1714196599982VATTI%20KI%20BHETKI.jpg",
+},
+{
+  id: 12,
+  category: "Fish Kebabs",
+  name: "Tandoori Pomfret",
+  price: 179,
+  available: true,
+  image:
+    "https://backend.caledonkababs.com/uploads/productsImage/1714196706524TANDOORI%20POMFRET.jpg",
+},
+{
+  id: 13,
+  category: "Fish Kebabs",
+  name: "Chingri BBQ",
+  price: 179,
+  available: true,
+  image:
+    "https://backend.caledonkababs.com/uploads/productsImage/1714196810536CHINGRI%20(SHRIMP)%20BBQ.jpg",
+},
+
+
+//FISH KEBAB SECTION DATA//
 
 
 ];
