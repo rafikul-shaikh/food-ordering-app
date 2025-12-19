@@ -24,7 +24,7 @@ const CategorySlider = () => {
     <>
       <section className="w-full bg-white ">
         <div className="max-w-5xl mx-auto px-4 ">
-          <h2 className="text-2xl font-semibold mb-8">
+          <h2 className="text-2xl font-semibold mt-3 mb-8">
             Explore our Categories
           </h2>
 
