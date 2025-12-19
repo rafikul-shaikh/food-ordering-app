@@ -11,7 +11,7 @@ const MenuItemCard = ({ item, onShowDetails }) => {
       <h3 className="mt-3 text-sm font-medium">{item.name}</h3>
       <button
         onClick={onShowDetails}
-        className="text-sm text-blue-500 hover:underline"
+        className="text-sm text-blue-500 hover:underline cursor-pointer"
       >
         Show Details
       </button>

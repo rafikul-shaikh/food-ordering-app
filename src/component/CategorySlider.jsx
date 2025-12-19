@@ -23,7 +23,7 @@ const CategorySlider = () => {
   return (
     <>
       <section className="w-full bg-white ">
-        <div className="max-w-7xl mx-auto px-35 py-3 border-b border-gray-300">
+        <div className="max-w-5xl mx-auto px-4 ">
           <h2 className="text-2xl font-semibold mb-8">
             Explore our Categories
           </h2>
@@ -45,30 +45,37 @@ const CategorySlider = () => {
               <CategoryCard
                 title="Fish Kebabs"
                 img="https://backend.caledonkababs.com/uploads/categoryImage/1715880582881444503437_2142333469481888_7176353247881770058_n.jpg"
+                targetId="Fish-Kebabs"
               />
               <CategoryCard
                 title="Veg Kebabs"
                 img="https://backend.caledonkababs.com/uploads/categoryImage/1715880561517444456937_2142333822815186_2478446153660797015_n.jpg"
+                targetId="Veg-Kebabs"
               />
               <CategoryCard
                 title="Kolkata Style Biryani"
                 img="https://backend.caledonkababs.com/uploads/categoryImage/1715880554559441950841_2142334966148405_2113571774599989178_n.jpg"
+                targetId="Kolkata Style Biryani"
               />
               <CategoryCard
                 title="Home Style Bengali Thalis"
                 img="https://backend.caledonkababs.com/uploads/categoryImage/1715880544574441583064_2142334792815089_2110740259659572292_n.jpg"
+                targetId="Home Style Bengali Thalis"
               />
               <CategoryCard
                 title="Fish Heaven"
                 img="https://backend.caledonkababs.com/uploads/categoryImage/1715880533166436209762_2142333656148536_5830337820395195328_n.jpg"
+                targetId="Fish Heaven"
               />
               <CategoryCard
                 title="Main Course"
                 img="https://backend.caledonkababs.com/uploads/categoryImage/1715880184197441238154_2142332386148663_8827173347457303737_n.jpg"
+                targetId="Main Course"
               />
               <CategoryCard
                 title="Bread & Rice"
                 img="https://backend.caledonkababs.com/uploads/categoryImage/1715880429538436221467_2142333172815251_8072771052593921302_n.jpg"
+                targetId="Bread & Rice"
               />
             </div>
 
@@ -79,6 +86,7 @@ const CategorySlider = () => {
               <ArrowRight />
             </button>
           </div>
+          <hr className="my-6 px-4 mx-auto border-gray-300" />
         </div>
       </section>
     </>

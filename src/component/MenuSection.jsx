@@ -40,7 +40,9 @@ const MenuSection = () => {
 
       {/* CHICKEN KEBABS SECTION */}
       <div id="Chicken-Kebabs" className="mb-16">
-        <h2 className="text-xl font-semibold mb-4">Chicken Kebabs</h2>
+        <h2 className="text-xl font-semibold">Chicken Kebabs</h2>
+
+        <hr className="my-2 px-4 mx-auto border-gray-300" />
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
           {chickenKebabs.map((item) => (
@@ -54,7 +56,10 @@ const MenuSection = () => {
       </div>
       {/* FISH KEBAB SECTION   */}
       <div id="Fish-Kebabs" className="mb-16">
-        <h2 className="text-xl font-semibold mb-4">Fish Kebab</h2>
+        <h2 className="text-xl font-semibold">Fish Kebab</h2>
+
+        <hr className="my-2 px-4 mx-auto border-gray-300" />
+
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
           {fishKebabs.map((item) => (
             <MenuItemCard
@@ -67,7 +72,10 @@ const MenuSection = () => {
       </div>
       {/* VEG KEBAB SECTION   */}
       <div id="Veg-Kebabs" className="mb-16">
-        <h2 className="text-xl font-semibold mb-4">Veg Kebab</h2>
+        <h2 className="text-xl font-semibold">Veg Kebab</h2>
+
+        <hr className="my-2 px-4 mx-auto border-gray-300" />
+
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
           {vegKebabs.map((item) => (
             <MenuItemCard
@@ -80,7 +88,10 @@ const MenuSection = () => {
       </div>
       {/* KOLKATA STYLE BIRIYANI SECTION  */}
       <div id="Kolkata Style Biryani" className="mb-16">
-        <h2 className="text-xl font-semibold mb-4">Kolkata Style Biryani</h2>
+        <h2 className="text-xl font-semibold ">Kolkata Style Biryani</h2>
+
+        <hr className="my-2 px-4 mx-auto border-gray-300" />
+
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
           {kolkataStyleBiryani.map((item) => (
             <MenuItemCard
@@ -96,6 +107,9 @@ const MenuSection = () => {
         <h2 className="text-xl font-semibold mb-4">
           Home Style Bengali Thalis
         </h2>
+
+        <hr className="my-2 px-4 mx-auto border-gray-300" />
+
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
           {homeStyleThalis.map((item) => (
             <MenuItemCard
@@ -109,6 +123,9 @@ const MenuSection = () => {
       {/* FISH HEAVEN SECTION  */}
       <div id="Fish Heaven" className="mb-16">
         <h2 className="text-xl font-semibold mb-4">Fish Heaven</h2>
+
+        <hr className="my-2 px-4 mx-auto border-gray-300" />
+
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
           {fishHeaven.map((item) => (
             <MenuItemCard
@@ -122,6 +139,9 @@ const MenuSection = () => {
       {/* MAIN COURSE SECTION  */}
       <div id="Main Course" className="mb-16">
         <h2 className="text-xl font-semibold mb-4">Main Course</h2>
+
+        <hr className="my-2 px-4 mx-auto border-gray-300" />
+
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
           {mainCourse.map((item) => (
             <MenuItemCard
@@ -135,6 +155,9 @@ const MenuSection = () => {
       {/* BREAD & RICE SECTION  */}
       <div id="Bread & Rice" className="mb-16">
         <h2 className="text-xl font-semibold mb-4">Bread & Rice</h2>
+
+        <hr className="my-2 px-4 mx-auto border-gray-300" />
+
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
           {breadAndRice.map((item) => (
             <MenuItemCard
