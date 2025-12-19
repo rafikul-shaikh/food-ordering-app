@@ -1,8 +1,25 @@
 import React from "react";
+import { useRef } from "react";
 import CategoryCard from "./CategoryCard";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 
 const CategorySlider = () => {
+  const sliderRef = useRef(null);
+
+  const scrollLeft = () => {
+    sliderRef.current.scrollBy({
+      left: -220,
+      behavior: "smooth",
+    });
+  };
+
+  const scrollRight = () => {
+    sliderRef.current.scrollBy({
+      left: 220,
+      behavior: "smooth",
+    });
+  };
+
   return (
     <>
       <section className="w-full bg-white ">
@@ -12,14 +29,18 @@ const CategorySlider = () => {
           </h2>
 
           <div className="flex items-center justify-between gap-10">
-            <button className="hidden md:flex w-10 h-10 items-center justify-center rounded-full bg-gray-200">
+            <button
+              onClick={scrollLeft}
+              className="hidden md:flex w-10 h-10 items-center justify-center rounded-full bg-gray-200"
+            >
               <ArrowLeft />
             </button>
 
-            <div className="flex gap-20 overflow-x-hidden">
+            <div ref={sliderRef} className="flex gap-20 overflow-x-hidden">
               <CategoryCard
                 title="Chicken Kebabs"
                 img="https://backend.caledonkababs.com/uploads/categoryImage/1715880596540442483873_2142333979481837_215488358446462570_n.jpg"
+                targetId="Chicken-Kebabs"
               />
               <CategoryCard
                 title="Fish Kebabs"
@@ -43,7 +64,7 @@ const CategorySlider = () => {
               />
               <CategoryCard
                 title="Main Course"
-                img="https://backend.caledonkababs.com/uploads/categoryImage/1715880184197441238154_2142332386148663_8827173347457303737_n.jpghttps://backend.caledonkababs.com/uploads/categoryImage/1715880184197441238154_2142332386148663_8827173347457303737_n.jpg"
+                img="https://backend.caledonkababs.com/uploads/categoryImage/1715880184197441238154_2142332386148663_8827173347457303737_n.jpg"
               />
               <CategoryCard
                 title="Bread & Rice"
@@ -51,7 +72,10 @@ const CategorySlider = () => {
               />
             </div>
 
-            <button className="hidden md:flex w-10 h-10 items-center justify-center rounded-full bg-gray-200">
+            <button
+              onClick={scrollRight}
+              className="hidden md:flex w-10 h-10 items-center justify-center rounded-full bg-gray-200"
+            >
               <ArrowRight />
             </button>
           </div>
