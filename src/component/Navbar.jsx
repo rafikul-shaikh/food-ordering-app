@@ -16,22 +16,21 @@ const Navbar = () => {
             </a>
 
             <ul className=" font-semibold  hidden md:flex gap-x-8 text-gray-600">
-              <li className="flex items-center gap-1">
-                {/* <span>🏠</span> Home */}
-                <Home />
+              <li className="flex items-center gap-1 cursor-pointer hover:text-blue-500 transition-colors">
+                <Home size={18} />
                 Home
               </li>
-              <li className="flex items-center gap-1">
-                <HelpCircle />
+              <li className="flex items-center gap-1 cursor-pointer hover:text-blue-500 transition-colors">
+                <HelpCircle size={18} />
                 Help
               </li>
-              <li className="flex items-center gap-1">
-                <ShoppingCart /> Cart
+              <li className="flex items-center gap-1 cursor-pointer hover:text-blue-500 transition-colors">
+                <ShoppingCart size={18} /> Cart
               </li>
             </ul>
 
-            <div className="flex items-center gap-1">
-              <CircleUser /> Sign In
+            <div className="flex items-center gap-1 cursor-pointer hover:text-blue-500 transition-colors">
+              <CircleUser size={18} /> Sign In
             </div>
           </nav>
         </div>

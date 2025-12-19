@@ -22,7 +22,10 @@ const MenuItemCard = ({ item, onShowDetails }) => {
           {item.price}
         </p>
         {item.available ? (
-          <button className=" flex justify-around mt-3 pr-2 w-18 border-2 border-orange-500 text-orange-500 py-1 rounded font-bold hover:bg-orange-500 hover:text-white">
+          <button
+            className=" flex justify-around mt-3 pr-2 w-18 border-2 border-orange-500 text-orange-500 
+                  py-1 rounded font-bold hover:bg-orange-500 hover:text-white cursor-pointer"
+          >
             <Plus className="font-bold" /> Add
           </button>
         ) : (
