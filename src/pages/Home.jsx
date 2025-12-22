@@ -19,7 +19,7 @@ const Home = () => {
       <Navbar />
       <main className="pt-24">
         <CategorySlider />
-        <SearchBar searchText={searchText} setSearchText={searchText} />
+        <SearchBar searchText={searchText} setSearchText={setSearchText} />
         <MenuSection items={filteredItems} />
         <Footer />
       </main>

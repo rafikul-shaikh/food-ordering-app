@@ -1,35 +1,27 @@
 import { useState } from "react";
-import { menuItems } from "../data/menuItems";
+
 import MenuItemCard from "./MenuItemCard";
 import ItemDetailsModal from "./ItemDetailsModal";
 
-const MenuSection = () => {
+const MenuSection = ({ items }) => {
   const [selectedItem, setSelectedItem] = useState();
 
-  const chickenKebabs = menuItems.filter(
+  const chickenKebabs = items.filter(
     (item) => item.category === "Chicken Kebabs"
   );
-  const fishKebabs = menuItems.filter(
-    (item) => item.category === "Fish Kebabs"
-  );
-  const vegKebabs = menuItems.filter((item) => item.category === "Veg Kebabs");
-  const kolkataStyleBiryani = menuItems.filter(
+  const fishKebabs = items.filter((item) => item.category === "Fish Kebabs");
+  const vegKebabs = items.filter((item) => item.category === "Veg Kebabs");
+  const kolkataStyleBiryani = items.filter(
     (item) => item.category === "Kolkata Style Biryani"
   );
-  const homeStyleThalis = menuItems.filter(
+  const homeStyleThalis = items.filter(
     (item) => item.category === "Home Style Bengali Thalis"
   );
 
-  const fishHeaven = menuItems.filter(
-    (item) => item.category === "Fish Heaven"
-  );
-  const mainCourse = menuItems.filter(
-    (item) => item.category === "Main Course"
-  );
+  const fishHeaven = items.filter((item) => item.category === "Fish Heaven");
+  const mainCourse = items.filter((item) => item.category === "Main Course");
 
-  const breadAndRice = menuItems.filter(
-    (item) => item.category === "Bread & Rice"
-  );
+  const breadAndRice = items.filter((item) => item.category === "Bread & Rice");
 
   return (
     <section className="max-w-5xl mx-auto px-4">
