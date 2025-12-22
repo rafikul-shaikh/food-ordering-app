@@ -1,6 +1,8 @@
 import { Plus } from "lucide-react";
+import { useCart } from "../context/CartContext";
 
 const MenuItemCard = ({ item, onShowDetails }) => {
+  const { addToCart } = useCart();
   return (
     <div className=" p-3">
       <img
@@ -23,6 +25,7 @@ const MenuItemCard = ({ item, onShowDetails }) => {
         </p>
         {item.available ? (
           <button
+            onClick={() => addToCart(item)}
             className=" flex justify-around mt-3 pr-2 w-18 border-2 border-orange-500 text-orange-500 
                   py-1 rounded font-bold hover:bg-orange-500 hover:text-white cursor-pointer"
           >

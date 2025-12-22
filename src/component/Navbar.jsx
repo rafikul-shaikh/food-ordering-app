@@ -1,7 +1,13 @@
 import React from "react";
 import { Home, HelpCircle, ShoppingCart, CircleUser } from "lucide-react";
+import { useCart } from "../context/CartContext";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
+  const { cartItems } = useCart();
+
+  //console.log(cartItems);
+
   return (
     <>
       <header className=" fixed top-0 left-0 w-full bg-white border-b border-gray-50 z-50 shadow-md ">
@@ -25,7 +31,7 @@ const Navbar = () => {
                 Help
               </li>
               <li className="flex items-center gap-1 cursor-pointer hover:text-blue-500 transition-colors">
-                <ShoppingCart size={18} /> Cart
+                <ShoppingCart size={18} /> <Link to="/cart">Cart</Link>
               </li>
             </ul>
 
