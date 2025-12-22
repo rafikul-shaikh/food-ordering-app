@@ -8,11 +8,16 @@ import { menuItems } from "../data/menuItems";
 
 const Home = () => {
   const [searchText, setSearchText] = useState("");
-  const filteredItems = menuItems.filter(
-    (items) =>
-      items.name.toLowerCase().includes(searchText.toLowerCase()) ||
-      items.category.toLowerCase().includes(searchText.toLowerCase())
+  const matchedItems = menuItems.filter(
+    (item) =>
+      item.name.toLowerCase().includes(searchText.toLowerCase()) ||
+      item.category.toLowerCase().includes(searchText.toLowerCase())
   );
+  const unmatchedItems = menuItems.filter(
+    (item) => !matchedItems.includes(item)
+  );
+  const sortedItems =
+    searchText.trim() === "" ? menuItems : [...matchedItems, ...unmatchedItems];
 
   return (
     <>
@@ -20,7 +25,11 @@ const Home = () => {
       <main className="pt-24">
         <CategorySlider />
         <SearchBar searchText={searchText} setSearchText={setSearchText} />
-        <MenuSection items={filteredItems} />
+        <MenuSection
+          items={sortedItems}
+          matchedItems={matchedItems}
+          searchText={searchText}
+        />
         <Footer />
       </main>
     </>

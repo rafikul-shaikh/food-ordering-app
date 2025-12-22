@@ -3,7 +3,7 @@ import { useState } from "react";
 import MenuItemCard from "./MenuItemCard";
 import ItemDetailsModal from "./ItemDetailsModal";
 
-const MenuSection = ({ items }) => {
+const MenuSection = ({ items, matchedItems, searchText }) => {
   const [selectedItem, setSelectedItem] = useState();
 
   const chickenKebabs = items.filter(
@@ -29,6 +29,24 @@ const MenuSection = ({ items }) => {
         item={selectedItem}
         onClose={() => setSelectedItem(null)}
       />
+      {/*  SEARCH RESULTS SECTION */}
+      {searchText.trim() !== "" && matchedItems.length > 0 && (
+        <div className="mb-16">
+          <h2 className="text-xl font-semibold">Search Results</h2>
+
+          <hr className="my-2 px-4 mx-auto border-gray-300" />
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+            {matchedItems.map((item) => (
+              <MenuItemCard
+                key={`search-${item.id}`}
+                item={item}
+                onShowDetails={() => setSelectedItem(item)}
+              />
+            ))}
+          </div>
+        </div>
+      )}
 
       {/* CHICKEN KEBABS SECTION */}
       <div id="Chicken-Kebabs" className="mb-16">
