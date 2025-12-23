@@ -25,7 +25,10 @@ const MenuItemCard = ({ item, onShowDetails }) => {
         </p>
         {item.available ? (
           <button
-            onClick={() => addToCart(item)}
+            onClick={() => {
+              console.log("ADD CLICKED", item.name);
+              addToCart(item);
+            }}
             className=" flex justify-around mt-3 pr-2 w-18 border-2 border-orange-500 text-orange-500 
                   py-1 rounded font-bold hover:bg-orange-500 hover:text-white cursor-pointer"
           >

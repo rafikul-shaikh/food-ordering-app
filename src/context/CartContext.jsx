@@ -4,13 +4,13 @@ const CartContext = createContext();
 
 export const CartProvider = ({ children }) => {
   const [cartItems, setCartItems] = useState([]);
+  const [showToast, setShowToast] = useState(false);
 
   const addToCart = (item) => {
     setCartItems((prevItems) => {
       const existingItem = prevItems.find(
         (cartItem) => cartItem.id === item.id
       );
-
       if (existingItem) {
         return prevItems.map((cartItem) =>
           cartItem.id === item.id
@@ -21,6 +21,8 @@ export const CartProvider = ({ children }) => {
 
       return [...prevItems, { ...item, quantity: 1 }];
     });
+    setShowToast(true);
+    setTimeout(() => setShowToast(false), 2000);
   };
 
   const increaseQty = (id) => {
@@ -51,6 +53,7 @@ export const CartProvider = ({ children }) => {
       value={{
         cartItems,
         addToCart,
+        showToast,
         increaseQty,
         decreaseQty,
         removeFromCart,

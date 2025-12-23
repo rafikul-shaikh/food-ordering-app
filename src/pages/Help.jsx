@@ -2,17 +2,33 @@ import { Phone, Mail } from "lucide-react";
 
 const Help = () => {
   return (
-    <section className="max-w-5xl mx-auto px-4 pt-24 ">
-      <h1 className="text-2xl font-semibold text-center mt-4 mb-8">HELP</h1>
-      <div className="flex items-center justify-between">
-        {/* Food Related Support */}
-        <div className="border-b pb-6 mb-6 ">
-          <p className="font-semibold text-lg">+917797222128</p>
-          <p className="text-gray-500 text-sm mb-3">
-            for food related query & problem
-          </p>
+    <section className="max-w-2xl mx-auto px-4 pt-24 ">
+      <h1 className="text-2xl font-semibold text-center text-blue-500 mt-4 mb-3">
+        HELP
+      </h1>
+      <hr className="my-2 px-4 mx-auto border-gray-300" />
 
-          <div className="flex gap-4">
+      <div className="">
+        <div className="pb-6 mb-6 flex items-center justify-between ">
+          <div>
+            <p className="font-bold text-lg">+917797222128</p>
+            <p className="text-gray-500 text-sm mb-3">
+              for food related query & problem
+            </p>
+
+            <p className="font-bold text-lg">caledonkababs@gmail.com</p>
+            <p className="text-gray-500 text-sm mb-3">
+              for food related query & problem
+            </p>
+
+            <p className="font-bold text-lg">+919147375833</p>
+            <p className="text-gray-500 text-sm mb-3">for technical support</p>
+            <p className="font-bold text-lg">office@martiancorporation.com</p>
+            <p className="text-gray-500 text-sm mb-3">for technical support</p>
+          </div>
+
+          <div className="flex gap-4 flex-col">
+            {/* Food Related Support */}
             <a
               href="tel:+917797222128"
               className="flex items-center gap-2 bg-green-500 text-white px-4 py-2 rounded-md"
@@ -26,15 +42,7 @@ const Help = () => {
             >
               <Mail size={16} /> Send Mail
             </a>
-          </div>
-        </div>
-
-        {/* Technical Support */}
-        <div>
-          <p className="font-semibold text-lg">+919147375833</p>
-          <p className="text-gray-500 text-sm mb-3">for technical support</p>
-
-          <div className="flex gap-4">
+            {/* Technical Support */}
             <a
               href="tel:+919147375833"
               className="flex items-center gap-2 bg-green-500 text-white px-4 py-2 rounded-md"
