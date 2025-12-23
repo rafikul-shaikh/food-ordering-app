@@ -1,8 +1,9 @@
 import Navbar from "../component/Navbar";
 import { useCart } from "../context/CartContext";
+import CartSummary from "../component/CartSummary";
 
 const Cart = () => {
-  const { cartItems } = useCart;
+  const { cartItems, increaseQty, decreaseQty, removeFromCart } = useCart();
   return (
     <>
       <Navbar />
@@ -27,17 +28,36 @@ const Cart = () => {
                   <div className="flex-1">
                     <h3 className="font-semibold">{item.name}</h3>
                     <p className="text-sm text-gray-500">₹{item.price}</p>
-                    <p className="text-sm">Qty: {item.quantity}</p>
+                    <div className="flex items-center gap-3 mt-2">
+                      <button
+                        onClick={() => decreaseQty(item.id)}
+                        className="px-3 py-1 border rounded"
+                      >
+                        −
+                      </button>
+
+                      <span>{item.quantity}</span>
+
+                      <button
+                        onClick={() => increaseQty(item.id)}
+                        className="px-3 py-1 border rounded"
+                      >
+                        +
+                      </button>
+                    </div>
                   </div>
+                  <button
+                    onClick={() => removeFromCart(item.id)}
+                    className="text-red-500 font-bold"
+                  >
+                    ✕
+                  </button>
                 </div>
               ))
             )}
           </div>
-
           {/* Summary */}
-          <div className="border rounded-lg p-4">
-            <p className="text-gray-500">Summary will appear here</p>
-          </div>
+          <CartSummary />
         </div>
       </div>
     </>
