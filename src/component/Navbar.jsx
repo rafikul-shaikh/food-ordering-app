@@ -23,12 +23,11 @@ const Navbar = () => {
 
             <ul className=" font-semibold  hidden md:flex gap-x-8 text-gray-600">
               <li className="flex items-center gap-1 cursor-pointer hover:text-blue-500 transition-colors">
-                <Home size={18} />
-                Home
+                <Home size={18} /> <Link to="/"> Home</Link>
               </li>
               <li className="flex items-center gap-1 cursor-pointer hover:text-blue-500 transition-colors">
                 <HelpCircle size={18} />
-                Help
+                <Link to="/help"> Help</Link>
               </li>
               <li className="flex items-center gap-1 cursor-pointer hover:text-blue-500 transition-colors">
                 <ShoppingCart size={18} /> <Link to="/cart">Cart</Link>

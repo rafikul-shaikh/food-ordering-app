@@ -20,19 +20,16 @@ const Home = () => {
     searchText.trim() === "" ? menuItems : [...matchedItems, ...unmatchedItems];
 
   return (
-    <>
-      <Navbar />
-      <main className="pt-24">
-        <CategorySlider />
-        <SearchBar searchText={searchText} setSearchText={setSearchText} />
-        <MenuSection
-          items={sortedItems}
-          matchedItems={matchedItems}
-          searchText={searchText}
-        />
-        <Footer />
-      </main>
-    </>
+    <main className="pt-24">
+      <CategorySlider />
+      <SearchBar searchText={searchText} setSearchText={setSearchText} />
+      <MenuSection
+        items={sortedItems}
+        matchedItems={matchedItems}
+        searchText={searchText}
+      />
+      <Footer />
+    </main>
   );
 };
 

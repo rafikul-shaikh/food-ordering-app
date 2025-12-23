@@ -1,6 +1,8 @@
 import Navbar from "../component/Navbar";
 import { useCart } from "../context/CartContext";
 import CartSummary from "../component/CartSummary";
+import AddressSection from "../component/AddressSection";
+import PaymentSection from "../component/PaymentSection";
 
 const Cart = () => {
   const { cartItems, increaseQty, decreaseQty, removeFromCart } = useCart();
@@ -55,9 +57,12 @@ const Cart = () => {
                 </div>
               ))
             )}
+            {/* Summary */}
+
+            <CartSummary />
+            <AddressSection />
+            <PaymentSection />
           </div>
-          {/* Summary */}
-          <CartSummary />
         </div>
       </div>
     </>
