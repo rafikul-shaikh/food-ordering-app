@@ -2,11 +2,12 @@ import React from "react";
 import { Home, HelpCircle, ShoppingCart, CircleUser } from "lucide-react";
 import { useCart } from "../context/CartContext";
 import { Link } from "react-router-dom";
+import { useAuth } from "../context/AuthContext";
 
 const Navbar = () => {
   const { cartItems } = useCart();
-
   //console.log(cartItems);
+  const { openAuth } = useAuth();
 
   return (
     <>
@@ -30,12 +31,14 @@ const Navbar = () => {
                 <Link to="/help"> Help</Link>
               </li>
               <li className="flex items-center gap-1 cursor-pointer hover:text-blue-500 transition-colors">
-                <ShoppingCart size={18} /> <Link to="/cart">Cart</Link>
+                <ShoppingCart size={18} />
+                <Link to="/cart"> Cart </Link>
               </li>
             </ul>
 
             <div className="flex items-center gap-1 cursor-pointer hover:text-blue-500 transition-colors">
-              <CircleUser size={18} /> Sign In
+              <CircleUser size={18} />{" "}
+              <button onClick={openAuth}>Sign In</button>
             </div>
           </nav>
         </div>

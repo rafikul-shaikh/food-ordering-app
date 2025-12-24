@@ -1,4 +1,3 @@
-import Navbar from "../component/Navbar";
 import CategorySlider from "../component/CategorySlider";
 import SearchBar from "../component/SearchBar";
 import MenuSection from "../component/MenuSection";
