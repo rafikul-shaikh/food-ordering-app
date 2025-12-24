@@ -16,6 +16,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/help" element={<Help />} />
         <Route path="/cart" element={<Cart />} />
+        {/* <Route path="sign" element={<SignIn}/> */}
       </Routes>
       <CartSummaryBar />
     </>
