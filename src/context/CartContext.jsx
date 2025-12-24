@@ -5,6 +5,7 @@ const CartContext = createContext();
 export const CartProvider = ({ children }) => {
   const [cartItems, setCartItems] = useState([]);
   const [showToast, setShowToast] = useState(false);
+  const [showCartSummaryBar, setShowCartSummaryBar] = useState(true);
 
   const addToCart = (item) => {
     setCartItems((prevItems) => {
@@ -21,8 +22,14 @@ export const CartProvider = ({ children }) => {
 
       return [...prevItems, { ...item, quantity: 1 }];
     });
+    setShowCartSummaryBar(true);
+    //toast logic
     setShowToast(true);
     setTimeout(() => setShowToast(false), 2000);
+  };
+
+  const closeCartSummaryBar = () => {
+    setShowCartSummaryBar(false);
   };
 
   const increaseQty = (id) => {
@@ -54,6 +61,8 @@ export const CartProvider = ({ children }) => {
         cartItems,
         addToCart,
         showToast,
+        showCartSummaryBar,
+        closeCartSummaryBar,
         increaseQty,
         decreaseQty,
         removeFromCart,
