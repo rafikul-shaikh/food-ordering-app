@@ -1,9 +1,9 @@
 const LoginForm = ({ onSwitch }) => {
   return (
-    <div>
-      <h2 className="text-2xl font-semibold mb-6">Login</h2>
+    <div className="ml-10 mr-10">
+      <h2 className="text-3xl font-semibold mb-6">Login</h2>
 
-      <label htmlFor="email">
+      <label htmlFor="email" className="">
         Email or Phone Number <span className="text-red-500">*</span>
       </label>
       <input
@@ -11,7 +11,7 @@ const LoginForm = ({ onSwitch }) => {
         id="email"
         required
         placeholder="Enter Email or Phone Number"
-        className="w-full border px-3 py-2 mt-2 mb-10 rounded"
+        className="w-full text-sm  border  border-orange-500 px-3 py-2 mt-1 mb-2 rounded-lg"
       />
       <label htmlFor="password">
         Password <span className="text-red-500">*</span>
@@ -22,7 +22,7 @@ const LoginForm = ({ onSwitch }) => {
         id="password"
         required
         placeholder="Enter Password"
-        className="w-full border px-3 py-2 mt-2 mb-4 rounded"
+        className="w-full text-sm border border-orange-500 px-3 py-2 mt-1 mb-4 rounded-lg"
       />
 
       <button className="w-full bg-yellow-500 text-white py-2 rounded">

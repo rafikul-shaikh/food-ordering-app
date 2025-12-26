@@ -16,7 +16,7 @@ const AuthDrawer = () => {
       <Backdrop onClose={closeAuth} />
 
       <div
-        className="fixed top-0 right-0 h-full w-100 bg-white z-50
+        className="fixed top-0 right-0 h-full w-130 bg-white z-50
                    transform transition-transform duration-300"
       >
         <button onClick={closeAuth} className="absolute top-4 right-4">
