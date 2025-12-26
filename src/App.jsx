@@ -6,11 +6,13 @@ import CartSummaryBar from "./component/CartSummaryBar";
 import Home from "./pages/Home";
 import Help from "./pages/Help";
 import Cart from "./pages/Cart";
+import AuthDrawer from "./component/auth/AuthDrawer";
 
 function App() {
   return (
     <>
       <Navbar />
+      <AuthDrawer />
       <CartToast />
       <Routes>
         <Route path="/" element={<Home />} />

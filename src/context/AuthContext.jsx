@@ -4,13 +4,13 @@ import { createContext, useContext, useState } from "react";
 const AuthContext = createContext();
 
 export const AuthProvider = ({ children }) => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isAuthOpen, setIsAuthOpen] = useState(false);
   return (
     <AuthContext.Provider
       value={{
-        isOpen,
-        openAuth: () => setIsOpen(true),
-        closeAuth: () => setIsOpen(false),
+        isAuthOpen,
+        openAuth: () => setIsAuthOpen(true),
+        closeAuth: () => setIsAuthOpen(false),
       }}
     >
       {children}
