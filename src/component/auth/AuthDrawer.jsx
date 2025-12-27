@@ -4,7 +4,6 @@ import { useAuth } from "../../context/AuthContext";
 import LoginForm from "./LoginForm";
 import SignupForm from "./SignupForm";
 import Backdrop from "./Backdrop";
-import ForgotPasswordForm from "./ForgotPasswordForm";
 
 const AuthDrawer = () => {
   const { isAuthOpen, closeAuth } = useAuth();
@@ -17,7 +16,7 @@ const AuthDrawer = () => {
       <Backdrop onClose={closeAuth} />
 
       <div
-        className="fixed top-0 right-0 h-full w-130 bg-white z-50
+        className="fixed top-0 right-0 h-full w-130 bg-white z-1000
                    transform transition-transform duration-300 flex flex-col"
       >
         {/* HEADER (FIXED) */}
@@ -36,18 +35,9 @@ const AuthDrawer = () => {
 
         {/* BODY (SCROLLABLE, CHANGES) */}
         <div className="flex-1 overflow-y-auto px-6 py-6">
-          {mode === "login" && (
-            <LoginForm
-              onSwitch={() => setMode("signup")}
-              onForgot={() => setMode("forgot")}
-            />
-          )}
+          {mode === "login" && <LoginForm onSwitch={() => setMode("signup")} />}
 
           {mode === "signup" && <SignupForm onLogin={() => setMode("login")} />}
-
-          {mode === "forgot" && (
-            <ForgotPasswordForm onBack={() => setMode("login")} />
-          )}
         </div>
       </div>
     </>

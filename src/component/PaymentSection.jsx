@@ -4,7 +4,7 @@ const PaymentSection = () => {
   const [paymentMethod, setPaymentMethod] = useState("COD");
 
   return (
-    <div className="border rounded-lg p-4 mt-6">
+    <div className="w-sm p-4 mt-6">
       <h2 className="text-lg font-semibold mb-4">Payment Method</h2>
 
       {/* Options */}
@@ -30,7 +30,7 @@ const PaymentSection = () => {
         </label>
 
         <button
-          className="mt-6 w-full bg-black text-white py-3 rounded hover:bg-gray-800"
+          className="mt-6 w-full bg-green-600 text-white py-3 rounded hover:bg-gray-800"
           onClick={() => {
             alert(`Order placed using ${paymentMethod}`);
           }}

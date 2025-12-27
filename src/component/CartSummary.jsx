@@ -3,6 +3,8 @@ import { useCart } from "../context/CartContext";
 
 const CartSummary = () => {
   const { cartItems } = useCart();
+  const totalItems = cartItems.reduce((sum, item) => sum + item.quantity, 0);
+
   const subtotal = cartItems.reduce(
     (sum, item) => sum + item.price * item.quantity,
     0
@@ -13,6 +15,11 @@ const CartSummary = () => {
   return (
     <div className=" rounded-lg p-4 space-y-4">
       <h2 className="text-lg font-semibold">Bill Summary</h2>
+
+      <div className="flex justify-between text-sm">
+        <span>Total Items</span>
+        <span>{totalItems}</span>
+      </div>
 
       <div className="flex justify-between text-sm">
         <span>Subtotal</span>
@@ -27,20 +34,9 @@ const CartSummary = () => {
       <hr />
 
       <div className="flex justify-between font-semibold">
-        <span>Total</span>
+        <span>Total Pay</span>
         <span>₹{total}</span>
       </div>
-      <button
-        disabled={cartItems.length === 0}
-        className={`w-full mt-4 py-3 rounded-lg text-white 
-        ${
-          cartItems.length === 0
-            ? "bg-gray-400 cursor-not-allowed"
-            : "bg-green-600 hover:bg-green-700"
-        } `}
-      >
-        Proceed to Checkout
-      </button>
     </div>
   );
 };

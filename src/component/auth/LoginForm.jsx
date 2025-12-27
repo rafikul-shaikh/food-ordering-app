@@ -1,4 +1,14 @@
-const LoginForm = ({ onSwitch, onForgot }) => {
+import { useNavigate } from "react-router-dom";
+import { useAuth } from "../../context/AuthContext";
+
+const LoginForm = ({ onSwitch }) => {
+  const navigate = useNavigate();
+  const { closeAuth } = useAuth();
+
+  const handleForgot = () => {
+    closeAuth();
+    navigate("/forgot-password");
+  };
   return (
     <>
       <div className="px-10">
@@ -26,7 +36,7 @@ const LoginForm = ({ onSwitch, onForgot }) => {
           className="w-full text-sm border border-orange-500 px-3 py-2 mt-1 mb-4 rounded-lg"
         />
         <p
-          onClick={onForgot}
+          onClick={handleForgot}
           className="text-sm text-right text-yellow-600 cursor-pointer mb-4"
         >
           Forgot Password?

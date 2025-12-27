@@ -1,4 +1,4 @@
-const SignupForm = ({ onSwitch }) => {
+const SignupForm = ({ onLogin }) => {
   return (
     <div className="ml-10 mr-10">
       <h2 className="text-3xl font-semibold mb-6">Sign Up</h2>
@@ -82,7 +82,7 @@ const SignupForm = ({ onSwitch }) => {
       <p className="text-sm text-center mt-4">
         Already have an account?{" "}
         <span
-          onClick={onSwitch}
+          onClick={onLogin}
           className="text-yellow-600 cursor-pointer font-medium"
         >
           Login
