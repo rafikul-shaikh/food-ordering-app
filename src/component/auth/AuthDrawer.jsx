@@ -4,6 +4,7 @@ import { useAuth } from "../../context/AuthContext";
 import LoginForm from "./LoginForm";
 import SignupForm from "./SignupForm";
 import Backdrop from "./Backdrop";
+import ForgotPasswordForm from "./ForgotPasswordForm";
 
 const AuthDrawer = () => {
   const { isAuthOpen, closeAuth } = useAuth();
@@ -17,17 +18,35 @@ const AuthDrawer = () => {
 
       <div
         className="fixed top-0 right-0 h-full w-130 bg-white z-50
-                   transform transition-transform duration-300"
+                   transform transition-transform duration-300 flex flex-col"
       >
-        <button onClick={closeAuth} className="absolute top-4 right-4">
-          <X />
-        </button>
+        {/* HEADER (FIXED) */}
+        <div className="flex items-center justify-between px-6 py-4">
+          {/* <h2 className="text-xl font-semibold">
+            {mode === "login" ? "Sign In" : "Sign Up"}
+          </h2> */}
 
-        <div className="p-6 mt-10">
-          {mode === "login" ? (
-            <LoginForm onSwitch={() => setMode("signup")} />
-          ) : (
-            <SignupForm onSwitch={() => setMode("login")} />
+          <button onClick={closeAuth}>
+            <X className="w-5 h-5 text-gray-600 hover:text-black" />
+          </button>
+        </div>
+
+        {/* FIXED DIVIDER */}
+        <hr className="border-gray-300" />
+
+        {/* BODY (SCROLLABLE, CHANGES) */}
+        <div className="flex-1 overflow-y-auto px-6 py-6">
+          {mode === "login" && (
+            <LoginForm
+              onSwitch={() => setMode("signup")}
+              onForgot={() => setMode("forgot")}
+            />
+          )}
+
+          {mode === "signup" && <SignupForm onLogin={() => setMode("login")} />}
+
+          {mode === "forgot" && (
+            <ForgotPasswordForm onBack={() => setMode("login")} />
           )}
         </div>
       </div>

@@ -1,58 +1,70 @@
 const SignupForm = ({ onSwitch }) => {
   return (
     <div className="ml-10 mr-10">
-      <h2 className="text-2xl font-semibold mb-6">Create Account</h2>
+      <h2 className="text-3xl font-semibold mb-6">Sign Up</h2>
 
-      <div className="">
-        <label htmlFor="first-name">
-          First Name <span className="text-red-500">*</span>
+      <div className="grid grid-cols-2 gap-4">
+        <div className="flex flex-col">
+          <label htmlFor="first-name" className="mb-1 text-sm ">
+            First Name <span className="text-red-500">*</span>
+          </label>
+          <input
+            type="text"
+            id="first-name"
+            required
+            placeholder="First Name"
+            className="w-full border border-orange-500 px-3 py-2 rounded"
+          />
+        </div>
+
+        <div className="flex flex-col">
+          <label htmlFor="last-name" className="mb-1 text-sm ">
+            Last Name <span className="text-red-500">*</span>
+          </label>
+          <input
+            type="text"
+            id="last-name"
+            placeholder="Last Name"
+            className="w-full border border-orange-500 px-3 py-2 rounded"
+          />
+        </div>
+      </div>
+      <div className="mt-2">
+        <label htmlFor="email" className="">
+          Email <span className="text-red-500">*</span>
         </label>
         <input
           type="text"
-          id="first-name"
-          required
-          placeholder="First Name"
-          className="w-full border border-orange-500 px-3 py-2 mb-4 rounded"
-        />
-        <label htmlFor="last-name">
-          Last Name <span className="text-red-500">*</span>
-        </label>
-        <input
-          type="text"
-          id="last-name"
-          placeholder="Last Name"
-          className="w-full border  border-orange-500 px-3 py-2 mb-4  rounded"
+          id="email"
+          placeholder="Enter Email"
+          className="w-full border  border-orange-500 px-3 py-2 mb-3 rounded"
         />
       </div>
 
-      <label htmlFor="email">
-        Email or Phone <span className="text-red-500">*</span>
-      </label>
-      <input
-        type="text"
-        id="email"
-        placeholder="Email or Phone"
-        className="w-full border  border-orange-500 px-3 py-2 mb-4 rounded"
-      />
-      <div className=" ">
-        <label htmlFor="create-password">
-          Create Password <span className="text-red-500">*</span>
-        </label>
-        <input
-          type="password"
-          id="create-password"
-          placeholder="Enter Password"
-          className="w-full border  border-orange-500 px-3 py-2 mb-4 rounded"
-        />
-        <label htmlFor="confirm-pasword">
-          Confirnm Password <span className="text-red-500">*</span>
-        </label>
-        <input
-          type="text"
-          id="Confirm-password"
-          placeholder="confirm Password"
-          className="w-full border  border-orange-500 px-3 py-2 mb-4 rounded"
-        />
+      <div className="grid grid-cols-2 gap-4">
+        <div className="flex flex-col">
+          <label htmlFor="create-password">
+            Create Password <span className="text-red-500">*</span>
+          </label>
+          <input
+            type="password"
+            id="create-password"
+            placeholder="Enter Password"
+            className="w-full border  border-orange-500 px-3 py-2 mb-4 rounded"
+          />
+        </div>
+
+        <div className="flex flex-col">
+          <label htmlFor="confirm-pasword">
+            Confirnm Password <span className="text-red-500">*</span>
+          </label>
+          <input
+            type="text"
+            id="Confirm-password"
+            placeholder="confirm Password"
+            className="w-full border  border-orange-500 px-3 py-2 mb-4 rounded"
+          />
+        </div>
       </div>
 
       <ul className=" ml-6 mr-6 mb-3 list-disc pl-5  text-[10px] text-gray-600">
@@ -64,7 +76,7 @@ const SignupForm = ({ onSwitch }) => {
       </ul>
 
       <button className="w-full mt-6 bg-yellow-500 text-white py-2 rounded">
-        Sign Up
+        Create Account
       </button>
 
       <p className="text-sm text-center mt-4">
