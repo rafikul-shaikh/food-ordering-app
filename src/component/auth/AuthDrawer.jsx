@@ -16,8 +16,8 @@ const AuthDrawer = () => {
       <Backdrop onClose={closeAuth} />
 
       <div
-        className="fixed top-0 right-0 h-full w-130 bg-white z-1000
-                   transform transition-transform duration-300 flex flex-col"
+        className="fixed top-0 right-0 h-full w-full sm:w-105 md:w-120
+           bg-white z-50 transform transition-transform duration-300 flex flex-col"
       >
         {/* HEADER (FIXED) */}
         <div className="flex items-center justify-between px-6 py-4">
@@ -34,7 +34,7 @@ const AuthDrawer = () => {
         <hr className="border-gray-300" />
 
         {/* BODY (SCROLLABLE, CHANGES) */}
-        <div className="flex-1 overflow-y-auto px-6 py-6">
+        <div className="flex-1 overflow-y-auto px-4 sm:px-6 py-6">
           {mode === "login" && <LoginForm onSwitch={() => setMode("signup")} />}
 
           {mode === "signup" && <SignupForm onLogin={() => setMode("login")} />}

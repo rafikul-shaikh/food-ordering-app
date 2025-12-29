@@ -1,9 +1,9 @@
 const SignupForm = ({ onLogin }) => {
   return (
-    <div className="ml-10 mr-10">
+    <div className="px-4 sm:px-10">
       <h2 className="text-3xl font-semibold mb-6">Sign Up</h2>
 
-      <div className="grid grid-cols-2 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <div className="flex flex-col">
           <label htmlFor="first-name" className="mb-1 text-sm ">
             First Name <span className="text-red-500">*</span>
@@ -67,7 +67,7 @@ const SignupForm = ({ onLogin }) => {
         </div>
       </div>
 
-      <ul className=" ml-6 mr-6 mb-3 list-disc pl-5  text-[10px] text-gray-600">
+      <ul className="px-4 sm:px-6 mb-3 list-disc pl-5 text-xs sm:text-[10px] text-gray-600">
         <li>The password must contain at least one lowercase letter</li>
         <li>The password must contain at least one uppercase letter</li>
         <li>The password must be between 8 and 24 characters in length</li>
