@@ -28,15 +28,18 @@ const CategorySlider = () => {
             Explore our Categories
           </h2>
 
-          <div className="flex items-center justify-between gap-10">
+          <div className="flex items-center gap-3">
             <button
               onClick={scrollLeft}
-              className="hidden md:flex w-10 h-10 items-center justify-center rounded-full bg-gray-200"
+              className="flex w-8 h-8 md:w-10 md:h-10 items-center justify-center rounded-full bg-gray-200"
             >
               <ArrowLeft />
             </button>
 
-            <div ref={sliderRef} className="flex gap-20 overflow-x-hidden">
+            <div
+              ref={sliderRef}
+              className="flex-1 flex gap-4 sm:gap-6 md:gap-12 overflow-x-auto scroll-smooth touch-pan-x overscroll-x-contain"
+            >
               <CategoryCard
                 title="Chicken Kebabs"
                 img="https://backend.caledonkababs.com/uploads/categoryImage/1715880596540442483873_2142333979481837_215488358446462570_n.jpg"
@@ -81,7 +84,7 @@ const CategorySlider = () => {
 
             <button
               onClick={scrollRight}
-              className="hidden md:flex w-10 h-10 items-center justify-center rounded-full bg-gray-200"
+              className="shrink-0 flex w-8 h-8 md:w-10 md:h-10 items-center justify-center rounded-full bg-gray-200"
             >
               <ArrowRight />
             </button>

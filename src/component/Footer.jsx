@@ -4,8 +4,8 @@ const Footer = () => {
   return (
     <footer className="bg-[#FFF8EE]">
       <div className="max-w-6xl mx-auto px-4 py-8">
-        <div className="flex flex-row justify-between">
-          <div className="flex flex-col gap-24">
+        <div className="flex flex-col md:flex-row md:justify-between gap-10">
+          <div className="flex flex-col gap-6 md:gap-24">
             <img
               src="https://caledonkababs.com/static/media/logo.dc18dac3a4d547f493ef.png"
               alt="Caledon Kababs"
@@ -23,7 +23,7 @@ const Footer = () => {
             </div>
           </div>
 
-          <div className="mt-10 md:mt-0 flex gap-24">
+          <div className="flex flex-col sm:flex-row gap-8 md:gap-24">
             <div>
               <h4 className="  text-orange-500 text-sm font-semibold mb-4">
                 COMPANY

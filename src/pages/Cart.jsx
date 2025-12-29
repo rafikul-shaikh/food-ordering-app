@@ -1,6 +1,5 @@
 import Navbar from "../component/Navbar";
 import { useCart } from "../context/CartContext";
-
 import CartSummary from "../component/CartSummary";
 import { Minus, Plus, X } from "lucide-react";
 
