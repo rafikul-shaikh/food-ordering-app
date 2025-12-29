@@ -6,16 +6,12 @@ import { ArrowLeft, ArrowRight } from "lucide-react";
 const CategorySlider = () => {
   const sliderRef = useRef(null);
 
-  const scrollLeft = () => {
-    sliderRef.current.scrollBy({
-      left: -220,
-      behavior: "smooth",
-    });
-  };
+  const scroll = (direction) => {
+    const slider = sliderRef.current;
+    if (!slider) return;
 
-  const scrollRight = () => {
-    sliderRef.current.scrollBy({
-      left: 220,
+    slider.scrollBy({
+      left: direction * 300, // scroll 300px
       behavior: "smooth",
     });
   };
@@ -29,8 +25,14 @@ const CategorySlider = () => {
           </h2>
 
           <div className="flex items-center gap-3">
-            <button
+            {/* <button
               onClick={scrollLeft}
+              className="flex w-8 h-8 md:w-10 md:h-10 items-center justify-center rounded-full bg-gray-200"
+            >
+              <ArrowLeft />
+            </button> */}
+            <button
+              onClick={() => scroll(-1)}
               className="flex w-8 h-8 md:w-10 md:h-10 items-center justify-center rounded-full bg-gray-200"
             >
               <ArrowLeft />
@@ -38,7 +40,7 @@ const CategorySlider = () => {
 
             <div
               ref={sliderRef}
-              className="flex-1 flex gap-4 sm:gap-6 md:gap-12 overflow-x-auto scroll-smooth touch-pan-x overscroll-x-contain"
+              className="flex-1 flex gap-4 sm:gap-6 md:gap-12 overflow-x-auto no-scrollbar scroll-smooth snap-x snap-mandatory"
             >
               <CategoryCard
                 title="Chicken Kebabs"
@@ -82,8 +84,15 @@ const CategorySlider = () => {
               />
             </div>
 
-            <button
+            {/* <button
               onClick={scrollRight}
+              className="shrink-0 flex w-8 h-8 md:w-10 md:h-10 items-center justify-center rounded-full bg-gray-200"
+            >
+              <ArrowRight />
+            </button> */}
+
+            <button
+              onClick={() => scroll(1)}
               className="shrink-0 flex w-8 h-8 md:w-10 md:h-10 items-center justify-center rounded-full bg-gray-200"
             >
               <ArrowRight />

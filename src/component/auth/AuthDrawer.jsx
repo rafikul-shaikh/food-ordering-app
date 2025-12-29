@@ -17,7 +17,7 @@ const AuthDrawer = () => {
 
       <div
         className="fixed top-0 right-0 h-full w-full sm:w-105 md:w-120
-           bg-white z-50 transform transition-transform duration-300 flex flex-col"
+           bg-white z-1000 transform transition-transform duration-300 flex flex-col"
       >
         {/* HEADER (FIXED) */}
         <div className="flex items-center justify-between px-6 py-4">

@@ -14,22 +14,17 @@ const CategoryCard = ({ img, title, targetId }) => {
   return (
     <div
       onClick={handleClick}
-      className="
-        flex flex-col items-center cursor-pointer
-       min-w-27.5 sm:min-w-32.5 md:min-w-37.5
-      "
+      className="shrink-0 w-[48%] sm:w-[45%] md:w-[22%] snap-start text-center cursor-pointer"
     >
-      <img
-        src={img}
-        alt={title}
-        className="
-          w-20 h-20
-          sm:w-24 sm:h-24
-          md:w-32 md:h-32
-          rounded-full object-cover mb-3
-        "
-      />
-      <p className="text-xs sm:text-sm font-medium text-center">{title}</p>
+      {/* Image wrapper */}
+      <div className="flex justify-center">
+        <img
+          src={img}
+          alt={title}
+          className=" w-20 h-20 sm:w-24 sm:h-24 md:w-32 md:h-32 rounded-full object-cover"
+        />
+      </div>
+      <p className="mt-3 text-xs sm:text-sm font-medium">{title}</p>
     </div>
   );
 };
