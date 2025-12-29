@@ -24,6 +24,7 @@ const SignupForm = ({ onLogin }) => {
           <input
             type="text"
             id="last-name"
+            required
             placeholder="Last Name"
             className="w-full border border-orange-500 px-3 py-2 rounded"
           />
@@ -34,14 +35,15 @@ const SignupForm = ({ onLogin }) => {
           Email <span className="text-red-500">*</span>
         </label>
         <input
-          type="text"
+          type="email"
           id="email"
+          required
           placeholder="Enter Email"
           className="w-full border  border-orange-500 px-3 py-2 mb-3 rounded"
         />
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap 4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <div className="flex flex-col">
           <label htmlFor="create-password">
             Create Password <span className="text-red-500">*</span>
@@ -49,19 +51,21 @@ const SignupForm = ({ onLogin }) => {
           <input
             type="password"
             id="create-password"
+            required
             placeholder="Enter Password"
             className="w-full border  border-orange-500 px-3 py-2 mb-4 rounded"
           />
         </div>
 
         <div className="flex flex-col">
-          <label htmlFor="confirm-pasword">
+          <label htmlFor="confirm-password">
             Confirm Password <span className="text-red-500">*</span>
           </label>
           <input
             type="password"
             id="confirm-password"
-            placeholder="confirm Password"
+            required
+            placeholder="Confirm Password"
             className="w-full border  border-orange-500 px-3 py-2 mb-4 rounded"
           />
         </div>
