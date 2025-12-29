@@ -21,10 +21,6 @@ const AuthDrawer = () => {
       >
         {/* HEADER (FIXED) */}
         <div className="flex items-center justify-between px-6 py-4">
-          {/* <h2 className="text-xl font-semibold">
-            {mode === "login" ? "Sign In" : "Sign Up"}
-          </h2> */}
-
           <button onClick={closeAuth}>
             <X className="w-5 h-5 text-gray-600 hover:text-black" />
           </button>

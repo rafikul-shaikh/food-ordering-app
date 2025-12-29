@@ -6,7 +6,6 @@ import {
   Menu,
   X,
 } from "lucide-react";
-import { useCart } from "../context/CartContext";
 import { Link } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
 import { useState } from "react";

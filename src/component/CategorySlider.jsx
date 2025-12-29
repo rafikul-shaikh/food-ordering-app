@@ -11,7 +11,7 @@ const CategorySlider = () => {
     if (!slider) return;
 
     slider.scrollBy({
-      left: direction * 300, // scroll 300px
+      left: direction * 300,
       behavior: "smooth",
     });
   };
@@ -25,12 +25,6 @@ const CategorySlider = () => {
           </h2>
 
           <div className="flex items-center gap-3">
-            {/* <button
-              onClick={scrollLeft}
-              className="flex w-8 h-8 md:w-10 md:h-10 items-center justify-center rounded-full bg-gray-200"
-            >
-              <ArrowLeft />
-            </button> */}
             <button
               onClick={() => scroll(-1)}
               className="flex w-8 h-8 md:w-10 md:h-10 items-center justify-center rounded-full bg-gray-200"
@@ -83,13 +77,6 @@ const CategorySlider = () => {
                 targetId="Bread & Rice"
               />
             </div>
-
-            {/* <button
-              onClick={scrollRight}
-              className="shrink-0 flex w-8 h-8 md:w-10 md:h-10 items-center justify-center rounded-full bg-gray-200"
-            >
-              <ArrowRight />
-            </button> */}
 
             <button
               onClick={() => scroll(1)}
