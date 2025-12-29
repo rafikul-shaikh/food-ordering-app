@@ -20,7 +20,7 @@ const Navbar = () => {
   return (
     <>
       <header className=" fixed top-0 left-0 w-full bg-white border-b border-gray-50 z-40 shadow-md ">
-        <div className="max-w-7xl mx-auto px-4 shadow-cyan-900">
+        <div className="max-w-5xl mx-auto px-4 shadow-cyan-900">
           <nav className="flex items-center justify-between h-20">
             <a href="/">
               <img

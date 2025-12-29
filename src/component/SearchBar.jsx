@@ -61,7 +61,7 @@ const SearchBar = ({ searchText, setSearchText }) => {
 
   return (
     <div className="w-full bg-white ">
-      <div className="max-w-6xl mx-auto mb-10 px-4 sm:px-6 lg:px-10 ">
+      <div className="max-w-5xl mx-auto mb-10 px-4 sm:px-6 lg:px-10 ">
         <h2 className="text-2xl font-semibold mt-6 mb-8">Explore our Items</h2>
         <div className="relative">
           <Search size={20} className="absolute left-3 top-5" />
