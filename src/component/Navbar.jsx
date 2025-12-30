@@ -21,13 +21,23 @@ const Navbar = () => {
       <header className=" fixed top-0 left-0 w-full bg-white border-b border-gray-50 z-40 shadow-md ">
         <div className="max-w-5xl mx-auto px-4 shadow-cyan-900">
           <nav className="flex items-center justify-between h-20">
-            <a href="/">
-              <img
-                src="https://caledonkababs.com/static/media/logo.dc18dac3a4d547f493ef.png"
-                alt="logo"
-                className="w-20 h-16"
-              />
-            </a>
+            <div className="flex flex-col  ">
+              <a href="/">
+                <img
+                  src="https://caledonkababs.com/static/media/logo.dc18dac3a4d547f493ef.png"
+                  alt="logo"
+                  className="w-15 h-12"
+                />
+              </a>
+              {/* <div className="">
+                <h2 className="text-lg font-bold text-blue-600">
+                  Rafikul{" "}
+                  <span className="text-lg font-bold text-blue-600">
+                    Kebabs{" "}
+                  </span>
+                </h2>
+              </div> */}
+            </div>
 
             {/* Desktop Menu */}
             <ul className="hidden md:flex gap-x-8 text-gray-600 font-semibold">

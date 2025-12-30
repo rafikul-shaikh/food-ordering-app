@@ -6,7 +6,7 @@ const Help = () => {
       <div className="flex flex-col w-full h-full sm:w-10/12 md:w-8/12 lg:w-6/12 max-w-maxContent gap-y-4 py-3">
         <div className="w-full h-full flex flex-col gap-y-3">
           {/* Title */}
-          <span className="text-center font-bold text-xs text-blue-500 pl-3 uppercase">
+          <span className="text-center font-bold text-lg text-blue-500 pl-3 uppercase">
             Help
           </span>
           <div className="h-px bg-black/10 my-1" />
