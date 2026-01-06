@@ -1,5 +1,6 @@
 import { Facebook, Instagram, Twitter, Github, Youtube } from "lucide-react";
 import { Link } from "react-router-dom";
+import logo from "../assets/Logo3.png";
 
 const Footer = () => {
   return (
@@ -8,15 +9,14 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row md:justify-between gap-10">
           <div className="flex flex-col gap-6 md:gap-24">
             <img
-              src="src\assets\Logo3.png"
-              // src="https://caledonkababs.com/static/media/logo.dc18dac3a4d547f493ef.png"
-              alt="Caledon Kababs"
+              src={logo}
+              alt="Rafikul Kababs"
               className="w-22  mb-3 cursor-pointer"
             />
             <div className="flex flex-row gap-2">
               <img
                 src="https://caledonkababs.com/static/media/fssai_final.ce5922e510d652f168ac.avif"
-                alt=""
+                alt="Rafikul Kebabs"
                 className="w-16 h-8"
               />
               <p className="mt-4 text-xs text-gray-400">
@@ -60,19 +60,19 @@ const Footer = () => {
               </h4>
               <ul className="space-y-2 text-sm text-gray-700">
                 <li className="cursor-pointer hover:text-blue-600 hover:underline transition-colors">
-                  Shipping Policy
+                  <Link to="/policies/shipping">Shipping Policy</Link>
                 </li>
                 <li className="cursor-pointer hover:text-blue-600 hover:underline transition-colors">
-                  Return Policy
+                  <Link to="/policies/return">Return Policy</Link>
                 </li>
                 <li className="cursor-pointer hover:text-blue-600 hover:underline transition-colors">
-                  Refund Policy
+                  <Link to="/policies/refund">Refund Policy</Link>
                 </li>
                 <li className="cursor-pointer hover:text-blue-600 hover:underline transition-colors">
-                  Privacy Policy
+                  <Link to="/policies/privacy">Privacy Policy</Link>
                 </li>
                 <li className="cursor-pointer hover:text-blue-600 hover:underline transition-colors">
-                  Terms & Conditions
+                  <Link to="/policies/terms">Terms & Conditions</Link>
                 </li>
               </ul>
             </div>

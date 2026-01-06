@@ -8,6 +8,7 @@ import Help from "./pages/Help";
 import Cart from "./pages/Cart";
 import ForgotPassword from "./pages/ForgotPassword";
 import AuthDrawer from "./component/auth/AuthDrawer";
+import LegalPolicies from "./pages/LegalPolicies";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path="/help" element={<Help />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/forgot-password" element={<ForgotPassword />} />
+        <Route path="/policies/:type" element={<LegalPolicies />} />
       </Routes>
       <CartSummaryBar />
     </>

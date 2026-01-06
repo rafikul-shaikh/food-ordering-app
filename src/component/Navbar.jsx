@@ -9,6 +9,7 @@ import {
 import { Link } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
 import { useState } from "react";
+import logo from "../assets/Logo3.png";
 
 const Navbar = () => {
   // const { cartItems } = useCart();
@@ -23,12 +24,7 @@ const Navbar = () => {
           <nav className="flex items-center justify-between h-20">
             <div className="flex flex-col  ">
               <a href="/">
-                <img
-                  src="src\assets\Logo3.png"
-                  // src="https://caledonkababs.com/static/media/logo.dc18dac3a4d547f493ef.png"
-                  alt="logo"
-                  className="w-20 h-18"
-                />
+                <img src={logo} alt="logo" className="w-20 h-18" />
               </a>
               {/* <div className="">
                 <h2 className="text-lg font-bold text-blue-600">
