@@ -7,48 +7,27 @@ import { ArrowLeft, ArrowRight } from "lucide-react";
 
 const CategorySlider = () => {
   const sliderRef = useRef(null);
-  useEffect(() => {
-    const interval = setInterval(() => {
-      const slider = sliderRef.current;
-      if (!slider) return;
-
-      const cardWidth = slider.firstElementChild?.offsetWidth || 300;
-
-      const maxScroll = slider.scrollWidth - slider.clientWidth;
-
-      // RESET first, then return (NO smooth here)
-      if (slider.scrollLeft + cardWidth >= maxScroll) {
-        slider.scrollLeft = 0;
-        return;
-      }
-
-      // Smooth scroll ONLY here
-      slider.scrollBy({
-        left: cardWidth,
-        behavior: "smooth",
-      });
-    }, 2500);
-
-    return () => clearInterval(interval);
-  }, []);
-
   // useEffect(() => {
   //   const interval = setInterval(() => {
   //     const slider = sliderRef.current;
   //     if (!slider) return;
 
-  //     const halfWidth = slider.scrollWidth / 2;
+  //     const cardWidth = slider.firstElementChild?.offsetWidth || 300;
 
-  //     // silent reset (no animation)
-  //     if (slider.scrollLeft >= halfWidth) {
+  //     const maxScroll = slider.scrollWidth - slider.clientWidth;
+
+  //     // RESET first, then return (NO smooth here)
+  //     if (slider.scrollLeft + cardWidth >= maxScroll) {
   //       slider.scrollLeft = 0;
+  //       return;
   //     }
 
+  //     // Smooth scroll ONLY here
   //     slider.scrollBy({
-  //       left: 300,
+  //       left: cardWidth,
   //       behavior: "smooth",
   //     });
-  //   }, 1000);
+  //   }, 2500);
 
   //   return () => clearInterval(interval);
   // }, []);

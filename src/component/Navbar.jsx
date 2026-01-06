@@ -24,9 +24,10 @@ const Navbar = () => {
             <div className="flex flex-col  ">
               <a href="/">
                 <img
-                  src="https://caledonkababs.com/static/media/logo.dc18dac3a4d547f493ef.png"
+                  src="src\assets\Logo3.png"
+                  // src="https://caledonkababs.com/static/media/logo.dc18dac3a4d547f493ef.png"
                   alt="logo"
-                  className="w-15 h-12"
+                  className="w-20 h-18"
                 />
               </a>
               {/* <div className="">

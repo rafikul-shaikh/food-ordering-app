@@ -1,4 +1,5 @@
 import { Facebook, Instagram, Twitter, Github, Youtube } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -7,7 +8,8 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row md:justify-between gap-10">
           <div className="flex flex-col gap-6 md:gap-24">
             <img
-              src="https://caledonkababs.com/static/media/logo.dc18dac3a4d547f493ef.png"
+              src="src\assets\Logo3.png"
+              // src="https://caledonkababs.com/static/media/logo.dc18dac3a4d547f493ef.png"
               alt="Caledon Kababs"
               className="w-22  mb-3 cursor-pointer"
             />
@@ -18,7 +20,7 @@ const Footer = () => {
                 className="w-16 h-8"
               />
               <p className="mt-4 text-xs text-gray-400">
-                license No. 22823125000011
+                license No. 22823125000182
               </p>
             </div>
           </div>
@@ -43,9 +45,12 @@ const Footer = () => {
                 CONTACT US
               </h4>
               <ul className="space-y-2 text-sm text-gray-700">
-                <li className="cursor-pointer hover:text-blue-600 hover:underline transition-colors">
+                <Link
+                  to="/help"
+                  className="cursor-pointer hover:text-blue-600 hover:underline transition-colors"
+                >
                   Help & Support
-                </li>
+                </Link>
               </ul>
             </div>
 
@@ -78,9 +83,9 @@ const Footer = () => {
 
         <div className="flex flex-col md:flex-row justify-between items-center text-xs text-gray-600 gap-4">
           <p>
-            © 2024{" "}
+            © 2026{" "}
             <span className="cursor-pointer hover:text-blue-600 hover:underline transition-colors">
-              Martian Corporation.
+              Rafikul's Kebabs.
             </span>{" "}
             All Rights Reserved.
           </p>

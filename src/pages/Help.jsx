@@ -17,7 +17,7 @@ const Help = () => {
               {/* Food Phone */}
               <div className="flex w-full justify-between items-start">
                 <p className="flex flex-col text-sm font-bold sm:text-xl">
-                  +917797222128
+                  +919002800182
                   <span className="text-xs font-light">
                     for food related query & problem
                   </span>
@@ -33,7 +33,7 @@ const Help = () => {
               {/* Food Email */}
               <div className="flex w-full justify-between items-start">
                 <p className="flex flex-col text-sm font-bold sm:text-xl">
-                  caledonkababs@gmail.com
+                  rafikulshaikh510@gmail.com
                   <span className="text-xs font-light">
                     for food related query & problem
                   </span>
@@ -49,7 +49,7 @@ const Help = () => {
               {/* Tech Phone */}
               <div className="flex w-full justify-between items-start">
                 <p className="flex flex-col text-sm font-bold sm:text-xl">
-                  +919147375833
+                  +918250928498
                   <span className="text-xs font-light">
                     for technical support
                   </span>
@@ -65,7 +65,7 @@ const Help = () => {
               {/* Tech Email */}
               <div className="flex w-full justify-between items-start">
                 <p className="flex flex-col text-sm font-bold sm:text-xl">
-                  office@martiancorporation.com
+                  rafikulshaikh0335@gmail.com
                   <span className="text-xs font-light">
                     for technical support
                   </span>
