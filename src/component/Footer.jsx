@@ -32,10 +32,14 @@ const Footer = () => {
               </h4>
               <ul className="space-y-2 text-sm text-gray-700">
                 <li className="cursor-pointer hover:text-blue-600 hover:underline ">
-                  About
+                  <Link to="/about" className="hover:text-blue-500">
+                    About
+                  </Link>
                 </li>
                 <li className="cursor-pointer hover:text-blue-600 hover:underline transition-colors">
-                  Team
+                  <Link to="/team" className="hover:text-blue-500">
+                    Team
+                  </Link>
                 </li>
               </ul>
             </div>

@@ -23,17 +23,12 @@ const Navbar = () => {
         <div className="max-w-5xl mx-auto px-4 shadow-cyan-900">
           <nav className="flex items-center justify-between h-20">
             <div className="flex flex-col  ">
-              <a href="/">
+              <Link to="/">
                 <img src={logo} alt="logo" className="w-20 h-18" />
-              </a>
-              {/* <div className="">
-                <h2 className="text-lg font-bold text-blue-600">
-                  Rafikul{" "}
-                  <span className="text-lg font-bold text-blue-600">
-                    Kebabs{" "}
-                  </span>
-                </h2>
-              </div> */}
+              </Link>
+              {/* <a href="/">
+                <img src={logo} alt="logo" className="w-20 h-18" />
+              </a> */}
             </div>
 
             {/* Desktop Menu */}
