@@ -19,8 +19,8 @@ const MenuItemCard = ({ item, onShowDetails }) => {
       </button>
 
       <div className="flex justify-between">
-        <p className="mt-4 text-lg ">
-          <span className="font-bold text-2xl">₹ </span>
+        <p className="mt-4 text-lg  ">
+          <span className="font-bold text-xl">₹ </span>
           {item.price}
         </p>
         {item.available ? (

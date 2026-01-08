@@ -11,7 +11,7 @@ const Footer = () => {
             <img
               src={logo}
               alt="Rafikul Kababs"
-              className="w-22  mb-3 cursor-pointer"
+              className="w-22 h-20 mb-3 cursor-pointer"
             />
             <div className="flex flex-row gap-2">
               <img

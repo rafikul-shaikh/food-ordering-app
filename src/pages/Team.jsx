@@ -2,7 +2,7 @@ import PageLayout from "../component/PageLayout";
 
 const Team = () => {
   return (
-    <PageLayout title="Meet Our Team">
+    <PageLayout title="Meet Our Team" className="font-extrabold">
       <p className="text-gray-700 mb-6">
         Behind Rafikul’s Kebab is a passionate team dedicated to quality and
         customer satisfaction.

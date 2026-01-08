@@ -11,11 +11,13 @@ import Team from "./pages/Team";
 import ForgotPassword from "./pages/ForgotPassword";
 import AuthDrawer from "./component/auth/AuthDrawer";
 import LegalPolicies from "./pages/LegalPolicies";
+import ScrollToTop from "./component/ScrollToTop";
 
 function App() {
   return (
     <>
       <Navbar />
+      <ScrollToTop />
       <AuthDrawer />
       <CartToast />
       <Routes>

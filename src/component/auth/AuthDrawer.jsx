@@ -9,15 +9,18 @@ const AuthDrawer = () => {
   const { isAuthOpen, closeAuth } = useAuth();
   const [mode, setMode] = useState("login");
 
-  if (!isAuthOpen) return null;
+  // if (!isAuthOpen) return null;
 
   return (
     <>
-      <Backdrop onClose={closeAuth} />
+      {/* <Backdrop onClose={closeAuth} /> */}
+      {isAuthOpen && <Backdrop onClose={closeAuth} />}
 
       <div
-        className="fixed top-0 right-0 h-full w-full sm:w-105 md:w-120
-           bg-white z-1000 transform transition-transform duration-300 flex flex-col"
+        className={`fixed top-0 right-0 h-full w-full max-w-md 
+        bg-white z-1000 flex flex-col
+        transform transition-transform duration-300 ease-in-out
+        ${isAuthOpen ? "translate-x-0" : "translate-x-full"} `}
       >
         {/* HEADER (FIXED) */}
         <div className="flex items-center justify-between px-6 py-4">
